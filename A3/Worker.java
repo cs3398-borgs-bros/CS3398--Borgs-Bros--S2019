@@ -3,10 +3,12 @@ the existing code is "Closed" for modification. The existing
 methods are not modified. "Open" for modification is shown by 
 adding new functionality by implementing the new interfaces 
 rather than modifying the existing code.
+
 The Single Responsibility Principle applies to the Worker class 
 because only the Worker role is responsible for each of the 
 methods in the Worker class. This means only the Worker object 
 will invoke the methods in the Worker class
+
 The Interface Segregation Principle is shown in the Worker 
 class because rather than implementing a big multi purposed 
 interface that offers more functionality than needed, it implements 
