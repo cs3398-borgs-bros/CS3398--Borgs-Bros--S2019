@@ -15,9 +15,6 @@ the robot class doesnt need the eat function. Thus by using the interface segreg
 
 package threesolid;
 
-interface IWorker extends Feedable, Workable {
-}
-
 interface IWorkable {
 	public void work();
 }
