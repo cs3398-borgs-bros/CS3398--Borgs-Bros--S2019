@@ -31,18 +31,12 @@
      </jar>
   </target>
 
-  <!-- Target for running jar file-->
-  <target name="run">
-    <java jar="${build.dir}/Main.jar" fork="true"/>
-  </target>
-
-  <!-- Target to run all-->
+  <!-- Target to run all targets-->
   <target name="construct">
     <echo>Running all targets..</echo>
     <antcall target="clean"/>
     <antcall target="makedir"/>
     <antcall target="compile"/>
     <antcall target="makejar"/>
-    <antcall target="run"/>
   </target>
 </project>
