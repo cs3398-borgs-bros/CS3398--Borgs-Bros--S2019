@@ -1,34 +1,40 @@
 package threesolid;
 
+
 public class Main
 {   
+  public static Manager testManager = new Manager();
 
-   public static Manager tsManager = new Manager();
 
-   // The entry main() method
-   public static void main(String[] args) 
-   {
- 
-      try 
-      {
-         System.out.format("Starting ... \n");               
-      } 
-      catch (Exception main_except)
-      {
-         main_except.printStackTrace();
-      }
+  // The entry main() method
+  public static void main(String[] args) 
+  {
+    System.out.format("Starting management ... \n"); 
+    try 
+    {  
+      System.out.format("Hiring new Worker.. \n"); 
+      testManager.setWorker(new Worker());
+      System.out.format("Managing Worker.. \n"); 
+      testManager.manage();
 
-            try 
-      {
-         System.out.format("Stopping ... \n");               
-      } 
-      catch (Exception main_except)
-      {
-         main_except.printStackTrace();
-      }
+      
+      System.out.format("Hiring new SuperWorker.. \n");
+      testManager.setWorker(new SuperWorker());
+      System.out.format("Managing SuperWorker.. \n");
+      testManager.manage();
 
-      System.exit(0);
 
-   }
- }
+      System.out.format("Hiring new Robot.. \n");
+      testManager.setWorker(new Robot());
+      System.out.format("Managing Robot.. \n");
+      testManager.manage();
+    } 
+    catch (Exception main_except)
+    {
+      main_except.printStackTrace();
+    }
 
+    System.out.format("Management complete. \n"); 
+    System.exit(0);
+  }
+}
